@@ -1,0 +1,1 @@
+# pfalzagentur-basic-template
