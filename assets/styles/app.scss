@@ -1,0 +1,162 @@
+
+/**
+ * Basic styles
+ */
+
+ html {
+  font-size: 26px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  @apply overflow-x-hidden text-gray-500;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  hyphens: auto;
+  @apply break-words;
+}
+
+h4 {
+  @apply font-medium text-3xs;
+  letter-spacing: 0.1rem;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+a {
+  &:not(.no-hover-color) {
+    &:hover {
+      transition: color .15s ease-in !important;
+      @apply cursor-pointer;
+    }
+  }
+}
+
+em {
+  @apply italic;
+}
+
+pre {
+  font-family: inherit;
+}
+
+.button {
+  @apply relative px-6 text-xs py-2 xl:py-2 inline-block text-blue-400 text-center cursor-pointer bg-blue-200 2xl:py-3 xl:text-base xl:px-8;
+
+  &.sm {
+    @apply px-4;
+  }
+  &:hover {
+    &::after{
+      content: '';
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      @apply border-blue-400 text-blue-400 border-2 border-collapse;
+    }
+  }
+}
+
+/**
+* Global style classes
+*/
+
+.app--container {
+  max-width: 100vw;
+  overflow: hidden;
+  @apply px-4 w-full;
+
+  @screen md {
+    @apply px-8;
+  }
+
+  @screen lg {
+    @apply px-16;
+  }
+
+  @screen xl {
+    @apply mx-auto max-w-screen-3xl;
+  }
+
+  @screen 4xl {
+    @apply px-4;
+  }
+
+  &.overflow-visible {
+    @apply overflow-visible;
+  }
+
+  &.app--container-slim {
+    @apply px-3;
+
+    @screen md {
+      @apply px-8;
+    }
+
+    @screen lg {
+      @apply px-14;
+    }
+
+    @screen 4xl {
+      @apply px-1;
+    }
+  }
+}
+
+.app--viewport-space-around {
+  @apply mx-2 my-2;
+  @screen xs {
+    @apply mx-3 my-3;
+  }
+
+  @screen 2xl {
+    @apply mx-6 my-6;
+  }
+}
+
+.app--legal-page {
+  hyphens: auto;
+  word-break: break-word;
+  @apply py-32 min-h-screen;
+
+  @screen md {
+    @apply py-52;
+  }
+
+  @screen 2xl {
+    @apply py-64;
+  }
+
+  @screen 4xl {
+    @apply py-72;
+  }
+
+  :v-deep {
+    p, a {
+      word-break: break-all;
+      hyphens: auto;
+    }
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+}

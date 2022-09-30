@@ -13,9 +13,18 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "comfortable-nuxt": "^0.2.1",
     "core-js": "^3.19.3",
+    "gsap": "./gsap-bonus.tgz",
+    "moment": "^2.29.3",
     "nuxt": "^2.15.8",
+    "slugify": "^1.6.5",
+    "swiper": "5.x",
+    "vee-validate": "3",
     "vue": "^2.6.14",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-headroom": "^0.10.1",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
@@ -28,6 +37,8 @@
     "eslint": "^8.4.1",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
-    "postcss": "^8.4.4"
+    "postcss": "^8.4.4",
+    "sass": "^1.50.0",
+    "sass-loader": "10"
   }
 }

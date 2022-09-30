@@ -15,5 +15,12 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'no-console': 'off',
+    'comma-dangle': 'off',
+    'vue/no-v-html': 'off',
+    'no-prototype-builtins': 'off',
+    'vue/v-slot-style': 'off',
+    'vue/multi-word-component-names': 'off',
+  },
 }
